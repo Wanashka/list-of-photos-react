@@ -62,6 +62,7 @@
 }
 .photo {
   max-width: 405px;
+  width: 100%;
   max-height: 405px;
   border-radius: 20px;
 }
