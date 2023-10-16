@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { ListPhotos } from './Component/listPhotos/listPhotos';
+import { Modal } from './Component/Modal/Modal';
 
-function App() {
+const App = () => {
+  const [isViewed, setIsViewed] = useState(false);
+  const [id, setId] = useState();
+  const [photosOne, setPhotosOne] = useState(null);
+  const [showOnePhotos, setShowOnePhotos] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+      <ListPhotos
+        setIsViewed={setIsViewed}
+        setPhotosOne={setPhotosOne}
+        setShowOnePhotos={setShowOnePhotos}
+        setId={setId}
+      />
+      <Modal
+        isViewed={isViewed}
+        setIsViewed={setIsViewed}
+        photosOne={photosOne}
+        showOnePhotos={showOnePhotos}
+        id={id}
+      />
     </div>
   );
-}
+};
 
 export default App;
