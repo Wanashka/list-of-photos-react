@@ -1,116 +1,174 @@
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
+
 .container {
-  width: 100%;
-  overflow: hidden;
-}
-.header {
-  position: relative;
-  height: 256px;
-}
-.background {
-  height: 192px;
-  width: 100%;
-  background-image: url('../../images/mountains.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.aboutMe {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  width: 70%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.userName {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.photoAvatar {
-  width: 128px;
-  border-radius: 68px;
-  padding: 5px;
-  background: #ffffff;
-}
-.blockConnect {
-  display: flex;
-  margin-left: auto;
-  justify-content: space-between;
-}
-.btn {
-  display: flex;
-  align-items: center;
-  min-width: 84px;
-  height: 38px;
-  background-color: white;
-  font-weight: 500;
-  border-radius: 6px;
-  border: solid 1px #d1d5db;
-  margin: 20px 10px;
-  cursor: pointer;
-  padding: 0 10px;
-}
-.btn img {
-  margin: 0 5px;
-}
-.containerListPhotos {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-.itemContainer {
-  max-width: 431px;
-  width: 100%;
-  margin: 10px auto;
-  cursor: pointer;
-}
-.itemPhoto {
-  width: 100%;
-  max-height: 216px;
-  border-radius: 8px;
-  object-fit: cover;
-  padding-bottom: 10px;
-}
-.photoId {
-  font-size: 14px;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  .aboutMe {
+    width: 100%;
+    overflow: hidden;
+
     display: flex;
-    width: 80%;
-  }
-  .userName {
-    margin-bottom: 15px;
-  }
-  .itemContainer {
-    margin: 10px auto;
-  }
+    flex-direction: column;
+    min-height: 100vh;
 }
-@media (max-width: 668px) {
-  .aboutMe {
-    width: 250px;
-  }
-  .photoAvatar {
+
+.header {
+    position: relative;
+    height: 160px;
+}
+
+.background {
+    height: 150px;
+    width: 100%;
+    background-image: url('../../images/matrix.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutMe {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.userName {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.photoAvatar {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 68px;
+    padding: 5px;
+    background: #ffffff;
+}
+
+.blockConnect {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    min-width: 84px;
+    height: 38px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: solid 1px #d1d5db;
+    margin: 20px 10px;
+    cursor: pointer;
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn img {
+    margin: 0 5px;
+}
+
+.containerListPhotos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    flex: 1;
+}
+
+.itemContainer {
+    max-width: 431px;
+    width: 100%;
+    max-height: 255px;
+    margin: 10px auto;
+    cursor: pointer;
+    border: solid #0095ff 1px;
+    border-radius: 8px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.itemPhoto {
+    width: 95%;
+    max-height: 216px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: #cccccc solid 1px;
+    object-fit: cover;
+}
+
+.photoId {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer {
+    height: 70px;
+    width: 90%;
     margin: 0 auto;
-  }
-  .userName {
-    margin: 0 auto;
-  }
-  .blockConnect {
-    margin: 0 auto;
-  }
-  .containerListPhotos {
-    display: block;
-    margin-top: 100px;
-  }
+    text-align: center;
+    padding-top: 15px;
+    border-top: solid 2px rgba(192, 192, 192);
+}
+
+.yearRelease {
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.linkToMail {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .aboutMe {
+        display: flex;
+        width: 80%;
+    }
+
+    .userName {
+        margin-bottom: 15px;
+    }
+
+    .itemContainer {
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 698px) {
+    .aboutMe {
+        width: 250px;
+    }
+
+    .photoAvatar {
+        margin: 0 auto;
+    }
+
+    .userName {
+        margin: 0 auto;
+    }
+
+    .blockConnect {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .containerListPhotos {
+        display: block;
+        margin-top: 150px;
+    }
 }

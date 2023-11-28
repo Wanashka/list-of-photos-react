@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import { ListPhotos } from './Component/listPhotos/listPhotos';
 import { Modal } from './Component/Modal/Modal';
+import ListPhotosContainer from './Component/listPhotos/listPhotosContainer';
 
 const App = () => {
   const [isViewed, setIsViewed] = useState(false);
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="Container">
-      <ListPhotos
+      <ListPhotosContainer
         setIsViewed={setIsViewed}
         setPhotosOne={setPhotosOne}
         setShowOnePhotos={setShowOnePhotos}
